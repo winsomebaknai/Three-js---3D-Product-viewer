@@ -11,7 +11,17 @@ interface ProductModelProps{
 }
 
 export function ProductModel({ product } : ProductModelProps){
-    const {scene} = useGLTF(product.modelPath);
+
+    let gltf;
+    try{
+        gltf = useGLTF(product.modelPath);
+    } catch (error) {
+        console.error(`Failed to load model: ${product.modelPath}`, error);
+        return null;
+    }
+
+    const { scene } = gltf;
+
     const clonedScene = scene.clone();
 
     useEffect(() => {
@@ -41,3 +51,10 @@ export function ProductModel({ product } : ProductModelProps){
         />
     );
 } 
+
+
+export function preloadProductModels(products: Product[]) {
+  products.forEach((product) => {
+    useGLTF.preload(product.modelPath);
+  });
+}

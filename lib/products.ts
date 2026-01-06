@@ -19,7 +19,7 @@ export const products: Product[] =[    //variable that will hold the data
         id: 'car',
         name: 'Sports Car',
         description: 'A sleek red sports car model.',
-        modelPath: '/models/car.glb',
+        modelPath: 'https://ajfotmnrbwtzzhbaltfc.supabase.co/storage/v1/object/public/models/car.glb',
         scale: 1.5,
         position: [0, -0.5, 0],
         rotation: [0, Math.PI/4, 0],    
@@ -27,9 +27,9 @@ export const products: Product[] =[    //variable that will hold the data
 
     {
         id: 'vintage car',
-        name: 'Vintage racing Car',
-        description: 'A vintage racing car model.',
-        modelPath: '/models/vintage_racing_car.glb',
+        name: 'cartoon car',
+        description: 'A cartoon car model.',
+        modelPath: 'https://ajfotmnrbwtzzhbaltfc.supabase.co/storage/v1/object/public/models/cartoon_car.glb',
         scale: 1.5,
         position: [0, -0.5, 0],
         rotation: [0, Math.PI/4, 0],    
@@ -37,9 +37,9 @@ export const products: Product[] =[    //variable that will hold the data
 
     {
         id: 'cartoon car',
-        name: 'Vintage wagon cartoon Car',
-        description: 'A vintage cartoon car model.',
-        modelPath: '/models/vintage_wagon_cartoon_car.glb',
+        name: 'Low poly truck',
+        description: 'A vintage cartoon truck wagon model.',
+        modelPath: 'https://ajfotmnrbwtzzhbaltfc.supabase.co/storage/v1/object/public/models/low-poly_truck.glb',
         scale: 1.5,
         position: [0, -0.5, 0],
         rotation: [0, Math.PI/4, 0],    
